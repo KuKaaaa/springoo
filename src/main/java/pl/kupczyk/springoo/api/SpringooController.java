@@ -1,16 +1,18 @@
 package pl.kupczyk.springoo.api;
 
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.*;
 import pl.kupczyk.springoo.model.Room;
 
 import java.util.Optional;
 
-@RestController
+@Controller
 @RequestMapping("api")
 public class SpringooController {
 
     private final SpringooService springooService;
+
 
     @Autowired
     public SpringooController(SpringooService springooService) {

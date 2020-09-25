@@ -3,24 +3,25 @@ package pl.kupczyk.springoo.api;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import pl.kupczyk.springoo.model.Room;
+import pl.kupczyk.springoo.repo.RoomRepository;
 
 import java.util.Optional;
 
 @Service
 public class SpringooService {
 
-    private final SpringooRepository springooRepository;
+    private final RoomRepository roomRepository;
 
     @Autowired
-    public SpringooService(SpringooRepository springooRepository) {
-        this.springooRepository = springooRepository;
+    public SpringooService(RoomRepository roomRepository) {
+        this.roomRepository = roomRepository;
     }
 
     public Iterable<Room> findAll(){
-        return springooRepository.findAll();
+        return roomRepository.findAll();
     }
 
     public Optional<Room> findById(Long id){
-        return springooRepository.findById(id);
+        return roomRepository.findById(id);
     }
 }
