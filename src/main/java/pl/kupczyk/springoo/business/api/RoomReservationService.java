@@ -1,13 +1,13 @@
-package pl.kupczyk.springoo.business.service;
+package pl.kupczyk.springoo.business.api;
 
 import org.springframework.stereotype.Service;
 import pl.kupczyk.springoo.business.domain.RoomReservation;
-import pl.kupczyk.springoo.model.Guest;
-import pl.kupczyk.springoo.model.Reservation;
-import pl.kupczyk.springoo.model.Room;
-import pl.kupczyk.springoo.repo.GuestRepository;
-import pl.kupczyk.springoo.repo.ReservationRepository;
-import pl.kupczyk.springoo.repo.RoomRepository;
+import pl.kupczyk.springoo.business.model.Guest;
+import pl.kupczyk.springoo.business.model.Reservation;
+import pl.kupczyk.springoo.business.model.Room;
+import pl.kupczyk.springoo.business.repo.GuestRepository;
+import pl.kupczyk.springoo.business.repo.ReservationRepository;
+import pl.kupczyk.springoo.business.repo.RoomRepository;
 
 import java.util.*;
 
@@ -37,7 +37,7 @@ public class RoomReservationService {
             roomReservationMap.put(room.getRoomId(), roomReservation);
         });
 
-        Iterable<Reservation> reservations = this.reservationRepository.findReservationByReservationDate(new java.sql.Date(date.getTime()));
+        Iterable<Reservation> reservations = this.reservationRepository.findByDate(new java.sql.Date(date.getTime()));
 
         reservations.forEach(reservation -> {
             RoomReservation roomReservation = roomReservationMap.get(reservation.getRoomId());

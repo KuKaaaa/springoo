@@ -1,4 +1,4 @@
-package pl.kupczyk.springoo.utils;
+package pl.kupczyk.springoo.business.utils;
 
 import java.text.DateFormat;
 import java.text.ParseException;
