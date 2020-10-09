@@ -1,7 +1,7 @@
-package pl.kupczyk.springoo.business.web;
+package pl.kupczyk.springoo.web;
 
 import org.springframework.stereotype.Service;
-import pl.kupczyk.springoo.business.domain.RoomReservation;
+import pl.kupczyk.springoo.domain.RoomReservation;
 import pl.kupczyk.springoo.model.Guest;
 import pl.kupczyk.springoo.model.Reservation;
 import pl.kupczyk.springoo.model.Room;
