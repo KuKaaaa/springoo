@@ -1,4 +1,4 @@
-package pl.kupczyk.springoo.business.model;
+package pl.kupczyk.springoo.model;
 
 import lombok.Getter;
 import lombok.Setter;

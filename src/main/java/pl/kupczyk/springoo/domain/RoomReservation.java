@@ -1,4 +1,4 @@
-package pl.kupczyk.springoo.business.domain;
+package pl.kupczyk.springoo.domain;
 
 import lombok.Getter;
 import lombok.Setter;
